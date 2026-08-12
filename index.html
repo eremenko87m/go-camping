@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#79c9ff" />
+  <title>Camp Quest — Summer Adventure</title>
+  <meta name="description" content="A bright A1 ESL adventure game for young learners: camping vocabulary, clothes, weather, actions and daily routine." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="gTent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff8a5b"/><stop offset="1" stop-color="#ff5f7a"/></linearGradient>
+      <linearGradient id="gBag" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#4fa8ff"/><stop offset="1" stop-color="#2864d7"/></linearGradient>
+      <linearGradient id="gGreen" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8ee27c"/><stop offset="1" stop-color="#37b96d"/></linearGradient>
+      <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-opacity=".18"/></filter>
+
+      <symbol id="i-tent" viewBox="0 0 120 100">
+        <path d="M12 82 55 18l51 64Z" fill="url(#gTent)" stroke="#513755" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M55 18 70 82H40Z" fill="#ffcf66" stroke="#513755" stroke-width="4"/>
+        <path d="M55 18 106 82" fill="none" stroke="#513755" stroke-width="4"/>
+        <path d="M28 82h78" stroke="#513755" stroke-width="5" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="i-sleepingbag" viewBox="0 0 120 100">
+        <rect x="20" y="14" width="78" height="70" rx="30" fill="#8c7dff" stroke="#483f78" stroke-width="5"/>
+        <path d="M58 14v70" stroke="#b9b0ff" stroke-width="5" stroke-dasharray="8 7"/>
+        <circle cx="38" cy="31" r="7" fill="#ffd46b"/>
+      </symbol>
+      <symbol id="i-cup" viewBox="0 0 120 100">
+        <path d="M28 29h58v46a12 12 0 0 1-12 12H40a12 12 0 0 1-12-12Z" fill="#ffdc65" stroke="#6b5140" stroke-width="5"/>
+        <path d="M86 39h10a16 16 0 0 1 0 32H86" fill="none" stroke="#6b5140" stroke-width="7"/>
+        <path d="M45 18c-7 8 7 10 0 18M65 18c-7 8 7 10 0 18" fill="none" stroke="#9dc6db" stroke-width="4" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="i-sandwich" viewBox="0 0 120 100">
+        <path d="m17 66 43-45 43 45Z" fill="#f5c46f" stroke="#6a4d3c" stroke-width="5" stroke-linejoin="round"/>
+        <path d="m28 62 32-26 31 26" fill="none" stroke="#51aa62" stroke-width="10" stroke-linejoin="round"/>
+        <path d="m34 55 26-21 24 21" fill="none" stroke="#ef5d5d" stroke-width="8" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="i-apple" viewBox="0 0 120 100">
+        <path d="M60 28c-10-13-30-5-33 15-4 26 15 45 33 45s37-19 33-45c-3-20-23-28-33-15Z" fill="#ff5f5f" stroke="#633c45" stroke-width="5"/>
+        <path d="M60 28c0-12 4-18 12-23" stroke="#604231" stroke-width="6" stroke-linecap="round"/>
+        <path d="M70 15c10-8 20-6 24 3-10 3-19 1-24-3Z" fill="#62c56c"/>
+      </symbol>
+      <symbol id="i-water" viewBox="0 0 120 100">
+        <rect x="38" y="12" width="44" height="76" rx="18" fill="#79d8ff" stroke="#31526b" stroke-width="5"/>
+        <rect x="47" y="6" width="26" height="13" rx="5" fill="#31526b"/>
+        <path d="M42 54h36" stroke="#fff" stroke-width="4" opacity=".9"/>
+      </symbol>
+      <symbol id="i-torch" viewBox="0 0 120 100">
+        <path d="M33 27h54l-11 22v37H44V49Z" fill="#ffcf5e" stroke="#50435c" stroke-width="5"/>
+        <rect x="42" y="18" width="36" height="15" rx="6" fill="#625875"/>
+        <circle cx="60" cy="64" r="9" fill="#fff3aa"/>
+      </symbol>
+      <symbol id="i-cap" viewBox="0 0 120 100">
+        <path d="M29 59c2-24 15-37 36-37s34 13 36 37Z" fill="#44b9ff" stroke="#3f4d68" stroke-width="5"/>
+        <path d="M63 59c21-2 38 1 47 10-24 6-43 4-57-4" fill="#59c8ff" stroke="#3f4d68" stroke-width="5" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="i-book" viewBox="0 0 120 100">
+        <path d="M17 24c17-8 30-7 43 3v57c-14-11-28-12-43-4Z" fill="#ff8aa5" stroke="#58405a" stroke-width="4"/>
+        <path d="M103 24c-17-8-30-7-43 3v57c14-11 28-12 43-4Z" fill="#7e8cff" stroke="#58405a" stroke-width="4"/>
+        <path d="M60 27v57" stroke="#58405a" stroke-width="4"/>
+      </symbol>
+      <symbol id="i-tv" viewBox="0 0 120 100">
+        <rect x="18" y="22" width="84" height="57" rx="10" fill="#4e5870" stroke="#343849" stroke-width="5"/>
+        <rect x="28" y="32" width="64" height="36" rx="4" fill="#9ee4ff"/>
+        <path d="m44 12 16 10 17-10" fill="none" stroke="#343849" stroke-width="5" stroke-linecap="round"/>
+        <path d="M41 79v9M80 79v9" stroke="#343849" stroke-width="5"/>
+      </symbol>
+      <symbol id="i-heels" viewBox="0 0 120 100">
+        <path d="M20 66c22-2 37-11 45-31 4 25 16 36 35 38l-4 12H40c-12 0-18-7-20-19Z" fill="#ed69ad" stroke="#603d57" stroke-width="5"/>
+        <path d="M83 72v18h8l5-17" fill="#ed69ad" stroke="#603d57" stroke-width="5"/>
+      </symbol>
+      <symbol id="i-skateboard" viewBox="0 0 120 100">
+        <rect x="13" y="47" width="94" height="20" rx="10" fill="#ff7b5b" stroke="#574050" stroke-width="5" transform="rotate(-6 60 57)"/>
+        <circle cx="33" cy="78" r="8" fill="#6d7794"/>
+        <circle cx="86" cy="72" r="8" fill="#6d7794"/>
+      </symbol>
+      <symbol id="i-pillow" viewBox="0 0 120 100">
+        <path d="M24 22c14 5 58 5 72 0 6 14 6 42 0 56-14-5-58-5-72 0-6-14-6-42 0-56Z" fill="#f7f7ff" stroke="#6b6b83" stroke-width="5"/>
+        <path d="M44 38c10 8 22 8 32 0" fill="none" stroke="#b3b3c7" stroke-width="4" stroke-linecap="round"/>
+      </symbol>
+
+      <symbol id="i-shirt" viewBox="0 0 120 100">
+        <path d="M41 17 23 28l-13 18 18 12 9-11v39h46V47l9 11 18-12-13-18-18-11c-5 9-29 9-38 0Z" fill="#ff6f7d" stroke="#4d455e" stroke-width="4" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="i-shorts" viewBox="0 0 120 100">
+        <path d="M27 18h66l-4 65-28-2-1-25-1 25-28 2Z" fill="#5db8ff" stroke="#44506a" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M27 33h66" stroke="#44506a" stroke-width="4"/>
+      </symbol>
+      <symbol id="i-boots" viewBox="0 0 120 100">
+        <path d="M20 22h30v42c7 7 13 11 25 11v14H18c-6 0-8-7-5-12l7-13Z" fill="#8c674f" stroke="#4e3a34" stroke-width="5"/>
+        <path d="M65 22h30v42c7 7 13 11 25 11v14H63c-6 0-8-7-5-12l7-13Z" fill="#9b7357" stroke="#4e3a34" stroke-width="5"/>
+      </symbol>
+      <symbol id="i-raincoat" viewBox="0 0 120 100">
+        <path d="M47 17c-10 3-18 10-22 22l-9 48h88l-9-48c-4-12-12-19-22-22-6 10-20 10-26 0Z" fill="#ffd84f" stroke="#51475d" stroke-width="5"/>
+        <path d="M60 25v59" stroke="#e0b234" stroke-width="4"/>
+        <circle cx="53" cy="47" r="3"/><circle cx="53" cy="62" r="3"/>
+      </symbol>
+      <symbol id="i-dress" viewBox="0 0 120 100">
+        <path d="M45 18h30l6 27 23 40H16l23-40Z" fill="#c779e8" stroke="#55425d" stroke-width="5" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="i-slippers" viewBox="0 0 120 100">
+        <path d="M12 66c12-16 29-17 44-2 6 7 2 20-10 22H23c-12 0-17-12-11-20Z" fill="#ff9ec4" stroke="#594553" stroke-width="5"/>
+        <path d="M64 66c12-16 29-17 44-2 6 7 2 20-10 22H75c-12 0-17-12-11-20Z" fill="#ff9ec4" stroke="#594553" stroke-width="5"/>
+      </symbol>
+      <symbol id="i-scarf" viewBox="0 0 120 100">
+        <path d="M29 28c8-20 54-20 62 0-4 17-15 24-31 24S33 45 29 28Z" fill="#ff6a7f" stroke="#594657" stroke-width="5"/>
+        <path d="M65 47 79 88H61l-6-37ZM78 45l28 32-14 10-28-35Z" fill="#ff6a7f" stroke="#594657" stroke-width="5"/>
+      </symbol>
+
+      <symbol id="i-sun" viewBox="0 0 120 100">
+        <circle cx="60" cy="50" r="24" fill="#ffd34d" stroke="#e5a83b" stroke-width="5"/>
+        <g stroke="#e5a83b" stroke-width="6" stroke-linecap="round"><path d="M60 7v12M60 81v12M17 50h12M91 50h12M30 20l8 9M82 71l8 9M90 20l-8 9M38 71l-8 9"/></g>
+      </symbol>
+      <symbol id="i-rain" viewBox="0 0 120 100">
+        <path d="M31 57h57c15 0 20-20 7-28-4-16-27-19-36-7-10-8-29 0-28 14-16 4-15 21 0 21Z" fill="#a9b8d8" stroke="#56617a" stroke-width="4"/>
+        <g stroke="#4ba7e8" stroke-width="5" stroke-linecap="round"><path d="m37 69-5 15M58 69l-5 15M79 69l-5 15"/></g>
+      </symbol>
+      <symbol id="i-snow" viewBox="0 0 120 100">
+        <path d="M30 52h58c15 0 19-19 7-27-4-14-26-17-35-6-11-8-29-1-29 13-16 4-16 20-1 20Z" fill="#dbe6f5" stroke="#64718a" stroke-width="4"/>
+        <g fill="#83c9ff"><circle cx="37" cy="71" r="4"/><circle cx="60" cy="77" r="4"/><circle cx="83" cy="70" r="4"/><circle cx="49" cy="90" r="4"/><circle cx="75" cy="90" r="4"/></g>
+      </symbol>
+      <symbol id="i-wind" viewBox="0 0 120 100">
+        <g fill="none" stroke="#8fb4cd" stroke-width="7" stroke-linecap="round"><path d="M12 35h62c19 0 19-22 2-22-8 0-11 6-11 10"/><path d="M12 54h83c18 0 17 22 1 22-9 0-12-6-12-11"/><path d="M12 73h42"/></g>
+      </symbol>
+      <symbol id="i-cloud" viewBox="0 0 120 100">
+        <path d="M24 69h68c19 0 24-25 8-35-5-17-30-21-41-8-12-10-35-1-34 16-19 5-18 27-1 27Z" fill="#f3f7ff" stroke="#657184" stroke-width="4"/>
+      </symbol>
+
+      <symbol id="i-toothbrush" viewBox="0 0 120 100">
+        <path d="M22 76 88 25" stroke="#5b80ff" stroke-width="10" stroke-linecap="round"/>
+        <path d="M84 20h24v18H84" fill="#a6baff" stroke="#4b5d98" stroke-width="4"/>
+        <g stroke="#fff" stroke-width="3"><path d="M90 22v12M96 22v12M102 22v12"/></g>
+      </symbol>
+      <symbol id="i-ball" viewBox="0 0 120 100">
+        <circle cx="60" cy="50" r="37" fill="#ffda59" stroke="#5d5062" stroke-width="5"/>
+        <path d="M60 13c-5 14-3 25 7 34 11 10 20 22 20 39M23 50c16-5 28-2 39 8 9 8 20 12 34 12M40 18c6 12 17 19 32 21 13 2 22 10 27 22" fill="none" stroke="#ff7e65" stroke-width="6"/>
+      </symbol>
+      <symbol id="i-fire" viewBox="0 0 120 100">
+        <path d="M29 85 93 55M27 56l67 29" stroke="#774c38" stroke-width="8" stroke-linecap="round"/>
+        <path d="M61 74c-22-10-17-31-4-42 2 13 9 13 11 2 17 14 22 35-7 40Z" fill="#ff724c" stroke="#69424a" stroke-width="4"/>
+        <path d="M61 70c-9-7-5-17 1-23 1 7 5 8 7 2 6 8 7 16-8 21Z" fill="#ffd555"/>
+      </symbol>
+      <symbol id="i-boardgame" viewBox="0 0 120 100">
+        <rect x="22" y="16" width="76" height="68" rx="8" fill="#f7f4e8" stroke="#5b5365" stroke-width="5"/>
+        <path d="M22 50h76M60 16v68" stroke="#5b5365" stroke-width="4"/>
+        <circle cx="41" cy="33" r="9" fill="#ff6b72"/><circle cx="79" cy="33" r="9" fill="#64b5ff"/><circle cx="41" cy="67" r="9" fill="#79cf75"/><circle cx="79" cy="67" r="9" fill="#ffd460"/>
+      </symbol>
+      <symbol id="i-plate" viewBox="0 0 120 100">
+        <ellipse cx="60" cy="55" rx="43" ry="29" fill="#f3f5fb" stroke="#596273" stroke-width="5"/>
+        <ellipse cx="60" cy="55" rx="29" ry="17" fill="#fff" stroke="#d8dde7" stroke-width="4"/>
+      </symbol>
+      <symbol id="i-bed" viewBox="0 0 120 100">
+        <path d="M15 65h90v20H15Z" fill="#5f7bbf" stroke="#3f4b64" stroke-width="5"/><path d="M21 37h22c12 0 20 8 20 20v8H21Z" fill="#fff3d5" stroke="#3f4b64" stroke-width="5"/><path d="M63 47h37c5 0 9 4 9 9v9H63Z" fill="#8dc3ff" stroke="#3f4b64" stroke-width="5"/><path d="M18 85v8M102 85v8" stroke="#3f4b64" stroke-width="5"/>
+      </symbol>
+      <symbol id="i-swim" viewBox="0 0 120 100">
+        <circle cx="48" cy="26" r="11" fill="#f2b58c"/><path d="M38 42c10-8 23-6 31 2l18 16" fill="none" stroke="#4f79d8" stroke-width="9" stroke-linecap="round"/><path d="m55 49-16 16M70 49l18-10" stroke="#f2b58c" stroke-width="7" stroke-linecap="round"/><path d="M15 78c10-8 20-8 30 0s20 8 30 0 20-8 30 0" fill="none" stroke="#53b9e9" stroke-width="6" stroke-linecap="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div id="gameShell" class="game-shell">
+    <header class="topbar">
+      <button id="homeBtn" class="icon-button" aria-label="Home" title="Home">
+        <span class="home-mark" aria-hidden="true"></span>
+      </button>
+      <div class="brand-mini">CAMP QUEST</div>
+      <div class="progress" id="progressDots" aria-label="Mission progress"></div>
+      <div class="top-actions">
+        <button id="teacherBtn" class="icon-button text-icon" aria-label="Teacher help" title="Teacher help">?</button>
+        <button id="soundBtn" class="icon-button sound-on" aria-label="Sound on/off" title="Sound on/off"><span></span></button>
+      </div>
+    </header>
+
+    <main id="app" class="app" aria-live="polite"></main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div id="confetti" class="confetti" aria-hidden="true"></div>
+  </div>
+
+  <div id="teacherModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="teacherTitle">
+    <div class="modal-card teacher-card">
+      <button class="close-btn" id="closeTeacher" aria-label="Close">×</button>
+      <div class="modal-kicker">FOR THE TEACHER</div>
+      <h2 id="teacherTitle">Language focus</h2>
+      <div class="teacher-grid">
+        <div><b>Mission 1</b><span>camping items · need / don’t need · have got</span></div>
+        <div><b>Mission 2</b><span>clothes · is wearing · Present Continuous</span></div>
+        <div><b>Mission 3</b><span>weather · to be · Present Continuous</span></div>
+        <div><b>Mission 4</b><span>camp actions · can / can’t · sequencing</span></div>
+        <div><b>Mission 5</b><span>daily routine · Present Simple · before / after</span></div>
+        <div><b>Mission 6</b><span>celebration · speaking recap</span></div>
+      </div>
+      <p class="teacher-note">Tip: ask learners to say each sentence aloud before they click. The game gives visual feedback, but the speaking turn is where the language practice happens.</p>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
